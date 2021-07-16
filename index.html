@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="player">
+        <div class="player__overlay">
+          <h2 class="player__title">Sintel (short film)</h2>
+          <div class="player__actions">
+            <button
+              class="button"
+              id="backward"
+              aria-label="Backward 10 seconds"
+              title="Backward 10 seconds"
+            ></button>
+            <button
+              class="button"
+              id="play"
+              aria-label="Play video"
+              title="Play video"
+            ></button>
+            <button
+              class="button"
+              hidden
+              id="pause"
+              aria-label="Pause video"
+              title="Pause video"
+            ></button>
+            <button
+              class="button"
+              id="forward"
+              aria-label="Forward 10 seconds"
+              title="Forward 10 seconds"
+            ></button>
+          </div>
+          <div class="player__progress">
+            <input id="progress" type="range" min="0" value="0" step="1" />
+          </div>
+        </div>
+        <video
+          id="video"
+          poster="https://media.w3.org/2010/05/sintel/poster.png"
+          src="https://media.w3.org/2010/05/sintel/trailer.mp4"
+          width="400"
+        ></video>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

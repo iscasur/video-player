@@ -1,0 +1,76 @@
+@import './buttons.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #26b4bc;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.player {
+  position: relative;
+}
+
+.player__overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.player video {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.player__title {
+  color: #edf5fc;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 20px;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.player__actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.player__progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+  z-index: 2;
+}
+
+.player__progress input {
+  flex: 1;
+}
+
+.player:hover .player__overlay {
+  opacity: 1;
+}
