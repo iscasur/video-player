@@ -17,11 +17,15 @@ function handlePlay() {
   $video.play();
   $play.hidden = true;
   $pause.hidden = false;
+  $backward.hidden = false;
+  $forward.hidden = false;
 }
 
 function handlePause() {
   $video.pause();
   $pause.hidden = true;
+  $backward.hidden = true;
+  $forward.hidden = true;
   $play.hidden = false;
 }
 
